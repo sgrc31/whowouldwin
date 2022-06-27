@@ -1,0 +1,14 @@
+# Changes here will be overwritten by Copier
+_commit: 39c2e8a
+_src_path: gl:sgrc31/copier-django-poetry-scaffold
+author_email: s.guercio@gmail.com
+author_fullname: Simone Guercio
+copyright_year: 2022
+django_lts: false
+friendly_name: WhoWouldWin
+package_name: whowouldwin
+package_version: 0.1.0
+project_description: To be provided yet
+project_license: GPL-3.0-or-later
+project_name: whowouldwin
+

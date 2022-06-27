@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "whowouldwin"
+version = "0.1.0"
+description = "To be provided yet"
+license = "GPL-3.0-or-later"
+authors = ["Simone Guercio <s.guercio@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "whowouldwin", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Django = "^4.0.5"
+django-extensions = "^3.1.5"
+shortuuid = "^1.0.9"
+
+[tool.poetry.dev-dependencies]
+pytest = ">=7.1.1"
+black = ">=22.3.0"
+coverage = {extras = ["toml"], version = ">=6.3.2"}
+pytest-django = "^4.5.2"
+pytest-cov = ">=3.0.0"
+pytest-mock = ">=3.7.0"
+mypy = ">=0.942"
+pre-commit = ">=2.15.0"
+reorder-python-imports = ">=3.1.0"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+DJANGO_SETTINGS_MODULE = "whowouldwin.settings"
+python_files = ["tests.py", "test_*.py", "*_tests.py"]
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+tests = ["tests", "*/tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["whowouldwin", "tests"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.mypy]
+strict = true
+warn_unreachable = true
+pretty = true
+show_column_numbers = true
+show_error_codes = true
+show_error_context = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
