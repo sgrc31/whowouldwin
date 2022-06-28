@@ -9,7 +9,7 @@ class Fighter(models.Model):
     powers = models.TextField()
 
     def __str__(self):
-        return 'self.name'
+        return self.name
 
 class Fight(models.Model):
     name = models.CharField(max_length=150)
@@ -25,6 +25,9 @@ class Fight(models.Model):
                                  default=1
                                  )
     small_uuid = ShortUUIDField(editable=False)
+
+    def __str__(self):
+        return f'{self.name} - {self.fighter1.name} vs {self.fighter2.name}'
 
 
 class Vote(models.Model):
