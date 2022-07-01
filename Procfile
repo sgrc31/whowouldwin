@@ -1,0 +1,1 @@
+web: gunicorn whowouldwin.wsgi --log-file -
