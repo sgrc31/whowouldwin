@@ -1,1 +1,1 @@
-web: gunicorn whowouldwin.wsgi --log-file -
+web: gunicorn --chdir src whowouldwin.wsgi --log-file -
