@@ -7,7 +7,7 @@ WhoWouldWin
 {% block content %}
 ciao belli! vediamo che combattimenti abbiamo disponibili
 {% for fight in active_fights_list %}
-<li>{{ fight.name }}: {{ fight.fighter1.name }} VS {{ fight.fighter2.name }}</li>
+<li><a href={% url 'fight_detail' fight.small_uuid %}>{{ fight.name }}</a>: {{ fight.fighter1.name }} VS {{ fight.fighter2.name }}</li>
 {% endfor %}
 
 
